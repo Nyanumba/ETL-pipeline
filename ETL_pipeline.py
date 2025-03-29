@@ -5,7 +5,7 @@ import os
 from sqlalchemy import create_engine
 import sqlite3
 #importing the api request
-api_url = "http://api.stackexchange.com/2.3/questions?order=desc&sort=activity&site=stackoverflow"
+api_url = " "
 header = {
     "Content-Type": "application/json",
     "Accept-Encoding": "deflate"
@@ -22,8 +22,8 @@ if response.status_code == 200:
 
      # Flatten nested columns if any
     final_data = final_data.applymap(lambda x: ', '.join(x) if isinstance(x, list) else x)
-    #loading data to a excel database
-    db_file_path = 'C:/Users/antho/stackoverflow.db'  # Path to your SQLite database
+    #loading data to a SQLite database
+    db_file_path = ' '  # Path to your SQLite database
     table_name = 'questions'  # Name of the table to create in the database
     
     # Create a SQLite engine
